@@ -24,5 +24,4 @@ streamlit run app.py
 
 
 ## URL do Aplicativo 
-https://analise-carros.onrender.com 
-
+https://analise-carros.onrender.com
