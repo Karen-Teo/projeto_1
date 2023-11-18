@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 # Carregando os dados
-df_carros = pd.read_csv('C:\\Users\\Veronica\\Downloads\\vehicles.csv')
+df_carros = pd.read_csv('vehicles.csv')
 
 # Cabeçalho da aplicação
 st.title('Análise de Anúncios de Vendas de Carros')
