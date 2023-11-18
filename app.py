@@ -22,12 +22,12 @@ if hist_button:
     st.plotly_chart(fig_hist, use_container_width=True)
 
 # Pergunta 2: Criar um gráfico de dispersão entre preço e ano de fabricação
-st.header('Gráfico de Dispersão: Preço vs. Ano de Fabricação')
+st.header('Gráfico de Dispersão: Ano do Modelo vs. Preço')
 scatter_button = st.button('Criar Gráfico de Dispersão')
 
 if scatter_button:
-    st.write('Visualizando a relação entre preço e ano de fabricação dos carros')
-    fig_scatter = px.scatter(df_carros, x='year', y='price', color='type')
+    st.write('Visualizando a relação entre Ano do Modelo e Preço dos carros')
+    fig_scatter = px.scatter(df_carros, x='model_year', y='price', color='type')
     st.plotly_chart(fig_scatter, use_container_width=True)
 
 # Caixa de seleção para visualizar carros de uma marca específica
