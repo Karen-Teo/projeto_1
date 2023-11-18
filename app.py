@@ -27,13 +27,13 @@ scatter_button = st.button('Criar Gráfico de Dispersão')
 
 if scatter_button:
     st.write('Visualizando a relação entre preço e ano de fabricação dos carros')
-    fig_scatter = px.scatter(df_carros, x='year', y='price', color='manufacturer')
+    fig_scatter = px.scatter(df_carros, x='year', y='price', color='type')
     st.plotly_chart(fig_scatter, use_container_width=True)
 
 # Caixa de seleção para visualizar carros de uma marca específica
 st.header('Visualizar Carros por Marca')
 selected_manufacturer = st.selectbox('Selecione uma Marca de Carro',
-                                     df_carros['manufacturer'].unique())
+                                     df_carros['type'].unique())
 
 if selected_manufacturer:
     st.write(f'Visualizando carros da marca {selected_manufacturer}')
