@@ -37,7 +37,7 @@ selected_manufacturer = st.selectbox('Selecione uma Marca de Carro',
 
 if selected_manufacturer:
     st.write(f'Visualizando carros da marca {selected_manufacturer}')
-    filtered_data = df_carros[df_carros['manufacturer'] == selected_manufacturer]
+    filtered_data = df_carros[df_carros['type'] == selected_manufacturer]
     fig_manufacturer = px.histogram(filtered_data, x='odometer', color='model')
     st.plotly_chart(fig_manufacturer, use_container_width=True)
 
